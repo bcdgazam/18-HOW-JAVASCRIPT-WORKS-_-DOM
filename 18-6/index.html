@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-6 How to use getElementsByClassName and change innerHTML (Text Change, Style Change)</title>
+    <style>
+        body {
+            width: 1280px;
+            margin: 0 auto;
+        }
+        article{
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        section h2{
+            border-bottom: 5px solid #ddd;
+            padding: 20px;
+            padding-left: 0px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Exploring DOM</h2>
+        <article>
+            <h3>article-1</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit.</p>
+        </article>
+        <article>
+            <h3>article-2</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum beatae excepturi nesciunt veritatis.</p>
+        </article>
+        <article>
+            <h3>article-3</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit exercitationem nemo dolorum similique distinctio, magni minus odio veniam quis.</p>
+        </article>
+    </section>
+    <script>
+        let authors = document.getElementsByClassName('author');
+        for(let i = 0; i < authors.length; i++){
+            let element = authors[i];
+            element.style.backgroundColor = 'green';
+            element.style.color = 'white';
+            element.style.padding = '10px';
+            element.style.borderRadius = '5px 5px 5px 5px';
+
+            //To change writhing by Js
+            element.innerHTML = 'Lekhok-' + (i+1);
+        }
+    </script>
+</body>
+</html>

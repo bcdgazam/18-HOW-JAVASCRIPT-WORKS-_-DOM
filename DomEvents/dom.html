@@ -9,10 +9,14 @@
     <main>
         <section>
             <h3>Exploring DOM</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptates harum nam non? Molestias officia fugiat modi temporibus aut iure consectetur fuga, iusto recusandae repudiandae corrupti illo cumque sed sequi.</p>
+            <p id="first">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptates harum nam non? Molestias officia fugiat modi temporibus aut iure consectetur fuga, iusto recusandae repudiandae corrupti illo cumque sed sequi.</p>
         </section>
         <script>
-            console.log(document.body);
+            // document.getElementsByTagName('h3');
+            let first = document.getElementById('first');
+            first.style.backgroundColor = '#ddd';
+            first.style.color = 'green';
+            first.style.fontSize = '30px';
         </script>
     </main>
 </body>

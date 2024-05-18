@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-9 How to add elements to HTML using Javascript</title>
+    <style>
+        body {
+            width: 1280px;
+            margin: 0 auto;
+        }
+        article{
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        section h2{
+            border-bottom: 5px solid #ddd;
+            padding: 20px;
+            padding-left: 0px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Inserting DOM</h2>
+        <article id="first-article">
+            <h3>article-1</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit.</p>
+        </article>
+        <article class="special">
+            <h3>article-2</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum beatae excepturi nesciunt veritatis.</p>
+        </article>
+        <article class="special">
+            <h3>article-3</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit exercitationem nemo dolorum similique distinctio, magni minus odio veniam quis.</p>
+        </article>
+        <article>
+            <h3>Gift List</h3>
+            <ul id="gift-list">
+                <li>list Item - 1</li>
+                <li>list Item - 2</li>
+                <li>list Item - 3</li>
+                <li>list Item - 4</li>
+                <li>list Item - 5</li>
+            </ul>
+        </article>
+    </section>
+
+    <script>
+        const article = document.getElementById('first-article');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'This section is added by JavaScript';
+        article.appendChild(newParagraph);
+
+        //add one more git item
+        const ul = document.getElementById('gift-list');
+        const li = document.createElement('li');
+        li.innerHTML = 'Brand New Gift';
+        ul.appendChild(li);
+    </script>
+</body>
+</html>

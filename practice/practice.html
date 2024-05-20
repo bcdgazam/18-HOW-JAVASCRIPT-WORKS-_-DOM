@@ -26,7 +26,7 @@
 <body>
     <section class="special">
         <h2 class="author">heading-1</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla optio illum voluptas nisi! Cumque molestias nisi ad alias odit eveniet enim, vitae aspernatur, impedit veritatis, doloribus quod consequatur odio!</p>
+        <p id="SpecialClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla optio illum voluptas nisi! Cumque molestias nisi ad alias odit eveniet enim, vitae aspernatur, impedit veritatis, doloribus quod consequatur odio!</p>
     </section>
     <section class="special">
         <h2 class="author">heading-2</h2>
@@ -36,14 +36,42 @@
         <h2 class="author">heading-3</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, explicabo ab aperiam neque vitae itaque quam rerum facilis tempora error porro a iste aliquam tempore recusandae nulla nihil atque quidem!</p>
     </section>
+    <section>
+        <h2>Gift Item</h2>
+        <ul id="giftItem">
+            <li><a href="">gift-1</a></li>
+            <li><a href="">gift-2</a></li>
+            <li><a href="">gift-3</a></li>
+            <li><a href="">gift-4</a></li>
+            <li><a href="">gift-5</a></li>
+        </ul>
+    </section>
     <script>
-        let elementStyle = document.getElementsByClassName('author');
-        for(let i = 0; i <elementStyle.length; i++){
-            let element = elementStyle[i];
-            element.style.fontSize = '22px';
-            element.style.color = 'red';
-            element.innerHTML = 'Lekhok- ' + (i+1);
-        }
+
+        //Final Practice for DOM
+        // let domStyleOne = document.getElementById('SpecialClass');
+        // domStyleOne.style.fontSize = '30px';
+        // domStyleOne.style.color = 'yellow';
+
+        // let domStyleByClass = document.getElementsByClassName('author');
+        // for(let i = 0; i < domStyleByClass.length; i++){
+        //     let element = domStyleByClass[i];
+        //     element.style.color = 'blue';
+        //     element.innerHTML = 'Author Name -' + (i + 1);
+        // }
+
+        // let querySelect = document.querySelectorAll('.author');
+        // for(let i = 0; i < querySelect.length; i++){
+        //     let element = querySelect[i];
+        //     element.style.color =  'blue';
+        //     element.innerHTML = 'golam azam - ' + (i + 1);
+        // }
+
+        let ul = document.getElementById('giftItem');
+        let li = document.createElement('li');
+        li.innerHTML = 'Oh! New gift';
+        ul.appendChild(li);
+
     </script>
 </body>
 </html>

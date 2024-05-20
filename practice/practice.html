@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom practice</title>
+    <title>Dom is going on</title>
+    <style>
+        body {
+            width: 1280px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        section  {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        section h2 {
+            background-color: #ddd;
+            border-right: 5px solid #cc0000;
+            padding: 5px;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
-    <section>
-        <content>
-            <h3>Heading</h3>
-            <p id="special">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur repudiandae consequatur, aliquid natus reiciendis nisi hic.</p>
-        </content>
+    <section class="special">
+        <h2 class="author">heading-1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nulla optio illum voluptas nisi! Cumque molestias nisi ad alias odit eveniet enim, vitae aspernatur, impedit veritatis, doloribus quod consequatur odio!</p>
+    </section>
+    <section class="special">
+        <h2 class="author">heading-2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem id quisquam dolorum sint minima unde corrupti repellat mollitia odit nemo nam ratione at fuga quis quibusdam temporibus, ducimus vitae. Magni?</p>
+    </section>
+    <section class="special">
+        <h2 class="author">heading-3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, explicabo ab aperiam neque vitae itaque quam rerum facilis tempora error porro a iste aliquam tempore recusandae nulla nihil atque quidem!</p>
     </section>
     <script>
-        let elementStyle = document.getElementById('special');
-        elementStyle.style.backgroundColor = 'red';
-        elementStyle.style.fontSize = '30px';
+        let elementStyle = document.getElementsByClassName('author');
+        for(let i = 0; i <elementStyle.length; i++){
+            let element = elementStyle[i];
+            element.style.fontSize = '22px';
+            element.style.color = 'red';
+            element.innerHTML = 'Lekhok- ' + (i+1);
+        }
     </script>
 </body>
 </html>
